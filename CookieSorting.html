@@ -24,7 +24,7 @@
 				"name" : "Lorna Doone",
 				"shape" : "square"
 			}, {
-				"name" : "fig Newton",
+				"name" : "Fig Newton",
 				"shape" : "square"
 			}];
 			console.log(myCookies);
@@ -36,12 +36,29 @@
 			//for every item in my list, check its shape. If it's round, add to faves, otherwise, add to the rest.
 			
 			//introduce i and console.log the character
-			for(var i=0; i<4; i++){
-				console.log(i);
-				var currentCookie = myCookies[i];
-				console.log(currentCookie);
+
+				for (var i = 0; i < 4; i++) {
+					//console.log(i);
+					
+					var currentCookie = myCookies[i];
+					//console.log(currentCookie);
+
+					if (currentCookie.shape == "square") {
+
+						console.log(currentCookie);
+						myFaves.push(currentCookie);
+						//push means add.
+						//because shape is square add the currentCookie to myFaves list
+						//otherwise, add the currentCookie to theRest list
+					}else{
+						theRest.push(currentCookie);						
+					} //this is the end of the if/else list
+				} //this is the end of my for loop
 				
-			}
+				console.log(myFaves);
+				console.log(theRest);
+				
+				
 		</script>
 		
 	</body>
